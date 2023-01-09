@@ -1,0 +1,15 @@
+[importlinter]
+root_package = app
+include_external_packages = True
+
+[importlinter:contract:high_level_layers]
+name=Camadas do Projeto
+type=layers
+layers=
+    app.api
+    pandora.config
+    pandora.modules
+    pandora.database
+ignore_imports=
+    # O .env da migration precisa da URL do banco :S
+    pandora.database.migrations.env -> pandora.config 

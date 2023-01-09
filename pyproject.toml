@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "BC Software"
+version = "0.1.0"
+description = ""
+authors = ["Orion-Hunter <silvasalesf@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.88.0"
+pydantic = "^1.10.4"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+alembic = "^1.9.1"
+psycopg2-binary = "^2.9.5"
+mypy = "^0.991"
+sqlalchemy = {extras = ["mypy"], version = "^1.4.46"}
+
+
+[tool.poetry.dev-dependencies]
+isort = "^5.11.4"
+pylint = "^2.15.9"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+import-linter = "^1.6.0"
+vulture = "^2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+exclude = ["migrations/"]
+
+[tool.vulture]
+exclude = ["file*.py", "migrations/"]
+make_whitelist = true
+min_confidence = 80
+paths = ["app/"]
+sort_by_size = true
+ignore_names = ["cls"]
+# ignore_decorators = ["@app.route", "@require_*"]
+# verbose = true

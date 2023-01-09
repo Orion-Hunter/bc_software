@@ -1,0 +1,24 @@
+{
+    "editor.formatOnSave": true,
+    "python.defaultInterpreterPath": "/path_to_virtualenv/bin/python",
+    "python.languageServer": "Pylance",
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "editor.rulers": [
+        100
+    ],
+    "python.linting.mypyPath": "/path_to_virtualenv/bin/mypy",
+    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/path_to_virtualenv/bin/flake8",
+    "python.linting.flake8CategorySeverity.W": "Warning",
+    "python.linting.flake8CategorySeverity.F": "Error",
+    "python.linting.flake8CategorySeverity.E": "Error",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "files.eol": "\n"
+
+}
